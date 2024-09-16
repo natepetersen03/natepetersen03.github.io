@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Nate Petersen's Portfolio - Software Engineer">
+    <title>Nate Petersen | Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>
+
+    <nav class="fixed-nav">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <div class="container">
+            <h1>Nate Petersen</h1>
+            <img src="additionalFiles/nate-petersen.jpg" alt="Nate Petersen" class="profile-img">
+            <button id="resume-button">View Resume</button>
+            <div class="social-buttons">
+                <a href="https://github.com/natepetersen03" target="_blank" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/npetersen3" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="mailto:nathanielpetersen03@gmail.com" target="_blank" class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>Hi! I am a fourth-year computer science student at Georgia Tech with a passion for software development and problem solving. I have had three software engineering internships in the past, the most recent of which was at AWS with a backend focus. I am graduating with my Master's degree in machine learning in August of 2025, after which I plan on working full-time as a software engineer. When I'm not working, I love to lift weights, cook, and spend time outside!</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <div class="container">
+            <h2>Projects</h2>
+
+            <div class="project-card">
+                <h3>MacroMeals</h3>
+                <img src="additionalFiles/macromeals-img.jpeg" alt="MacroMeals Image">
+                <p>MacroMeals is a full-stack web application containing a unique dataset of over 27,000 recipes and a comprehensive
+                    React based UI that allows users to search for recipes that fit nutrient specifications. To create the dataset, I merged a recipe dataset, RecipeNLG, with a nutritional dataset using regular expression parsing and string
+                    matching techniques to provide users with recipe instructions, ingredients, and their associated nutrient profiles. After the dataset was finished, I used Python to implement the backend, leveraging SQLAlchemy to query a MySQL database containing recipe
+                    data and Flask to develop API endpoints.</p>
+                    <a href="https://github.com/natepetersen03/MacroMeals" target="_blank" class="view-project-button">View GitHub</a>
+            </div>
+
+            <div class="project-card">
+                <h3>Government Spending Forecaster</h3>
+                <img src="additionalFiles/nlp-finance-img.jpeg" alt="NLP Image">
+                <p>Created a predictive model for stock price forecasting based on data from presidential election cycles through working with team members. In doing this, I used natural language processing and sentiment analysis techniques to analyze 8000+ lines 
+                    of presidential debate transcripts. After the dataset was annotated, I effectively implemented machine learning models, specifically utilizing BERT and PyTorch in coordination with the annotated dataset to produce comprehensive stock price forecasts.</p>
+                    <a href="additionalFiles/VIP_Spring_2024_Final_Report.pdf" target="_blank" class="view-project-button">View Report</a>
+            </div>
+
+            <div class="project-card">
+                <h3>FroggerDroid</h3>
+                <img src="additionalFiles/froggerdroid.png" alt="FroggerDroid Image">
+                <p>FroggerDroid is a unique version of Frogger featuring Minecraft skins and entities. The game features a home screen where users get to choose their characters and game difficulty, 
+                    a main screen where users get to play the game, and an end screen for when the game is finished. To build the Android app, I used Gradle and coded in Java within Android Studio, integrating the LibGDX library.</p>
+                    <a href="https://github.com/natepetersen03/FroggerDroid" target="_blank" class="view-project-button">View GitHub</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact</h2>
+            <p>If you'd like to connect, feel free to reach out via <a href="mailto:nathanielpetersen03@gmail.com">email</a> or connect with me on <a href="https://www.linkedin.com/in/npetersen3">LinkedIn</a>.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>© 2024 Nate Petersen. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('resume-button').addEventListener('click', function() {
+            window.open('additionalFiles/Nathaniel_Petersen_Resume.pdf', '_blank');
+        });
+
+        document.querySelectorAll('nav ul li a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                if (this.getAttribute('href') !== '#') {
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                } else {
+                    window.scrollTo({
+                        top: 0,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
