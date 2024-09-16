@@ -27,6 +27,7 @@
             <h1>Nate Petersen</h1>
             <img src="additionalFiles/nate-petersen.jpg" alt="Nate Petersen" class="profile-img">
             <button id="resume-button">View Resume</button>
+            <button id="cover-letter-button">View Cover Letter</button>
             <div class="social-buttons">
                 <a href="https://github.com/natepetersen03" target="_blank" class="social-icon">
                     <i class="fab fa-github"></i>
@@ -97,6 +98,10 @@
     <script>
         document.getElementById('resume-button').addEventListener('click', function() {
             window.open('additionalFiles/Nathaniel_Petersen_Resume.pdf', '_blank');
+        });
+
+        document.getElementById('cover-letter-button').addEventListener('click', function() {
+            window.open('additionalFiles/Nathaniel_Petersen_cover_letter.pdf', '_blank');
         });
 
         document.querySelectorAll('nav ul li a').forEach(anchor => {
